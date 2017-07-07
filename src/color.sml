@@ -4,6 +4,7 @@ structure Color = struct
       Bright
     | Dim
     | Underlined
+    | None
 
   datatype color =
       Black
@@ -21,12 +22,12 @@ structure Color = struct
     | LightBlue
     | LightMagenta
     | LightCyan
-    | Bright
     | White
 
   fun attrCode Bright     = "\027[1m"
     | attrCode Dim        = "\027[2m"
-    | attrCode Underlined = "\027[4m]"
+    | attrCode Underlined = "\027[4m"
+    | attrCode None       = ""
 
   fun code Black        = "\027[30m"
     | code Red          = "\027[31m"
@@ -50,9 +51,7 @@ structure Color = struct
   fun colorize c s = (code c) ^ s ^ clReset
 
   val format : color * attribute -> string -> string =
-    fn (clr, attr) => fn s =>
-        (attrCode attr) ^ (code clr) ^ s ^ clReset
-
-  fun bolden s = "\027[1m" ^ s ^ "\027[22m"
+    fn (attr, clr) => fn s =>
+        ((attrCode attr) ^ (code clr) ^ s ^ clReset)
 
 end
