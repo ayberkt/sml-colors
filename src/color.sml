@@ -48,9 +48,9 @@ structure Color = struct
 
   val clReset = "\027[0m"
 
-  fun colorize c s = (code c) ^ s ^ clReset
+  fun colorize c s = code c ^ s ^ clReset
 
-  val format : color * attribute -> string -> string =
+  val format : attribute * color -> string -> string =
     fn (attr, clr) => fn s =>
         ((attrCode attr) ^ (code clr) ^ s ^ clReset)
 
