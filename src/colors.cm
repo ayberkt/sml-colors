@@ -1,0 +1,7 @@
+Library
+  signature ANSI_COLORS
+  structure Color
+is
+  $/basis.cm
+  color.sml
+  color.sig
