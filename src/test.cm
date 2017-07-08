@@ -1,4 +1,4 @@
 Group is
   $/basis.cm
-  colors.cm
+  ../colors.cm
   test.sml

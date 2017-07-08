@@ -3,5 +3,5 @@ Library
   structure Color
 is
   $/basis.cm
-  color.sml
-  color.sig
+  src/color.sml
+  src/color.sig
