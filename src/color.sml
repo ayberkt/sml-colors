@@ -1,4 +1,4 @@
-structure Color = struct
+structure Color : ANSI_COLORS = struct
 
   datatype attribute =
       Bright
