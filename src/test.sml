@@ -19,6 +19,8 @@ structure Test = struct
     , colorize LightBlue    "Light blue"
     , colorize LightMagenta "Light magenta"
     , colorize LightCyan    "Light cyan"
+    , format   (Bright, Red) "Bright Red"
+    , format   (Bright, Green) "Bright Green"
     ]
 
   fun main (arg0, argv) = (List.app printLn (strs ()); 0)
