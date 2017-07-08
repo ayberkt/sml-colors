@@ -7,32 +7,34 @@ that satisfied it. `Color` is defined in `src/color.cm`.
 
 `ANSI_COLORS` is the following:
 ```Standard ML
-datatype color =
-    Black
-  | Red
-  | Green
-  | Yellow
-  | Blue
-  | Magenta
-  | Cyan
-  | LightGray
-  | DarkGray
-  | LightRed
-  | LightGreen
-  | LightYellow
-  | LightBlue
-  | LightMagenta
-  | LightCyan
-  | White
+signature ANSI_COLORS = sig
+  datatype color =
+      Black
+    | Red
+    | Green
+    | Yellow
+    | Blue
+    | Magenta
+    | Cyan
+    | LightGray
+    | DarkGray
+    | LightRed
+    | LightGreen
+    | LightYellow
+    | LightBlue
+    | LightMagenta
+    | LightCyan
+    | White
 
-datatype attribute =
-    Bright
-  | Dim
-  | Underlined
-  | None
+  datatype attribute =
+      Bright
+    | Dim
+    | Underlined
+    | None
 
-val colorize : color -> string -> string
-val format   : attribute * color -> string -> string
+  val colorize : color -> string -> string
+  val format   : attribute * color -> string -> string
+end
 ```
 
 To test out, run `./script/test.sh`.
