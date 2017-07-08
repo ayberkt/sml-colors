@@ -3,7 +3,7 @@ structure Test = struct
 
   fun printLn s = print (s ^ "\n")
 
-  val strs =
+  val strs = fn () =>
     [
       colorize LightGray    "Light gray"
     , colorize DarkGray     "Dark gray"
@@ -14,5 +14,7 @@ structure Test = struct
     , colorize LightCyan    "Light cyan"
     ]
 
-  val _ = List.app printLn strs
+  fun main (arg0, argv) = (List.app printLn (strs ()); 0)
+
+  val _ = SMLofNJ.exportFn ("run_tests", main)
 end
