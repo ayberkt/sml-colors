@@ -5,7 +5,14 @@ structure Test = struct
 
   val strs = fn () =>
     [
-      colorize LightGray    "Light gray"
+      colorize Black        "Black"
+    , colorize Red          "Red"
+    , colorize Green        "Green"
+    , colorize Yellow       "Yellow"
+    , colorize Blue         "Blue"
+    , colorize Magenta      "Magenta"
+    , colorize Cyan         "Cyan"
+    , colorize LightGray    "Light gray"
     , colorize DarkGray     "Dark gray"
     , colorize LightRed     "Light red"
     , colorize LightYellow  "Light yellow"
