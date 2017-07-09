@@ -3,7 +3,7 @@
 ## Using
 
 `src/colors.cm` exports the `ANSI_COLORS` signature and the `Color` structure
-that satisfied it. `Color` is defined in `src/color.cm`.
+that satisfies it. `Color` is defined in `src/color.cm`.
 
 `ANSI_COLORS` is the following:
 ```Standard ML
